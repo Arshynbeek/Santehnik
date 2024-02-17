@@ -1,2 +1,4 @@
 @import url("./src/style/base.css");
 @import url("./src/style/title.css");
+@import url("./src/component/header.css");
+@import url("./src/component/footer.css");

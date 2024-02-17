@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  background-color: var(--background-1);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer strong {
+  margin-bottom: 10px;
+}
+
+footer nav > ul > li:first-child ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer nav > ul > li:last-child p {
+  max-width: 500px;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
