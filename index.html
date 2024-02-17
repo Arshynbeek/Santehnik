@@ -6,13 +6,73 @@
     <title>SantehTAT</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
 
   <body>
     <header></header>
 
     <section id="title">
-      <div class="container"></div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card bg-img" style="background-image: url('./public/image/title/title-1.jpg') ;">
+            <div class="container">
+              <h1 class="">
+                Поставка инженерной <br>
+                сантехники
+              </h1>
+
+              <p class="">
+                Предлагаем только качественные продукты от ведущих производителей.
+              </p>
+
+              <p class="">Начиная с 10000тг</p>
+
+              <a href="products.html" class="btn btn-blue">Cмотреть каталог</a>
+
+            </div>
+          </div>
+          <div class="swiper-slide card bg-img" style="background-image: url('./public/image/title/title-2.jpg') ;">
+            <div class="container">
+              <h1 class="">
+                Поставка инженерной <br>
+                сантехники
+              </h1>
+
+              <p class="">
+                Предлагаем только качественные продукты от ведущих производителей.
+              </p>
+
+              <p class="">Начиная с 10000тг</p>
+
+              <a href="products.html" class="btn btn-blue">Cмотреть каталог</a>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          loop: true,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
     </section>
 
     <section id="hot">
