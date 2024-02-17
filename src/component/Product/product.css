@@ -1,0 +1,4 @@
+.product-category {
+  display: flex;
+  justify-content: space-between;
+}
