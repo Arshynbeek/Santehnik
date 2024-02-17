@@ -100,31 +100,26 @@
 
     <section id="product">
       <div class="container">
-        <div class="product-category">
-          <p>a</p>
-          <p>b</p>
-          <p>c</p>
-          <p>d</p>
-          <p>e</p>
-          <p>f</p>
-          <p>g</p>
-        </div>
-
-        <div class="new" id="new-products">
-          <div class="product-card">
-            <div class="product-image">
-              <img src="" alt="">
-              <div class="product-sale"></div>
-            </div>
-
-            <div class="product-content">
-              <p>Шаровые краны</p>
-              <small>940₸ (шт.)</small>
-            </div>
+        <div class="product-type">
+          <div>
+            <p class="new-product filter-type">Новинки</p>|
+            <p class="best-product filter-type">Хиты продаж</p>
           </div>
-        </div>
 
-        <div class="hot" id="hot-rpoducts">
+          <a href="">Показать все продукты <span>></span></a>
+        </div>
+        <hr>
+
+        <div id="categories" class="categories"></div>
+        <div class="products" id="products"></div>
+
+        <div class="product-move">
+          <button class="move move-left">
+            <img src="./public/icon/chevron.svg" style="transform: rotate(90deg);" alt="">
+          </button>
+          <button class="move move-right">
+            <img src="./public/icon/chevron.svg" style="transform: rotate(-90deg);" alt="">
+          </button>
         </div>
       </div>
     </section>
@@ -140,7 +135,7 @@
     <section id="why">
       <div class="container">
         <h2>Почему SantehTAT</h2>
-        <ul class="">
+        <ul>
           <li>
             <img src="./public/image/why/feature-1.jpg" alt="">
             <h3>Удобная доставка товаров</h3>
@@ -239,5 +234,6 @@
     </footer>
 
     <script src="./src/component/Title/title.js"></script>
+    <script type="module" src="./src/component/Product/product.js"></script>
   </body>
 </html>
