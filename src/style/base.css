@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -20,7 +21,7 @@
 }
 
 h1, h2, h3, h4, h5, h6,
-p, a, li, small, strong {
+p, a, li, small, strong, input {
   font-family: Ubuntu, system-ui, -apple-system, sans-serif;
   font-style: normal;
   text-decoration: none;

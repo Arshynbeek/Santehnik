@@ -73,9 +73,34 @@
   top: 10px;
   left: 10px;
   padding: 4px 10px;
-  background-color: green;
+  background-color: red;
   border-radius: 4px;
   color: var(--white);
+  font-weight: 700;
+}
+
+.product-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buy-button {
+  color: var(--white);
+  background-color: green;
+  border: none;
 }
 
 .product-move {

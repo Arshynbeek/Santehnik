@@ -1,0 +1,40 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: var(--grey);
+}
+
+.title > div {
+  display: flex;
+}
+
+.title button {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 0px;
+  border-radius: 0px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background-color: var(--primary-color);
+
+  &>svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+#search-input {
+  font-size: 18px;
+  padding: 8px 18px;
+  border: 1px solid var(--black);
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  outline: none;
+}
+
+.catalog-products {
+  flex-wrap: wrap;
+}

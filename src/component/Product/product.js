@@ -19,8 +19,13 @@ function showProductsList() {
       </div>
 
       <div class="product-content">
-        <p>${product.name}</p>
-        <small>${product.price}₸ (шт.)</small>
+        <div class="product-info">
+          <p class="product-name">${product.name}</p>
+          <small>${product.price}₸ (шт.)</small>
+        </div>
+        <div class="buy" data-id="${product.id}">
+          <button class="buy-button" aria-label="add to cart">КУПИТЬ</button>
+        </div>
       </div>
     </div>
     `

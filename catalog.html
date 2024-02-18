@@ -7,28 +7,11 @@
     <title>SantehTAT</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/src/component/Contact/contact.css">
+    <link rel="stylesheet" href="./src/component/Basket/basket.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <style>
-      .shop {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        margin-top: 24px;
-      }
-
-      .title, .subtitle {
-        text-align: center;
-        color: var(--grey);
-      }
-
-      .title > span {
-        color: var(--primary-color);
-      }
-    </style>
   </head>
 
   <body>
@@ -48,10 +31,10 @@
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="">Каталог</a></li>
           <li><a href="">Как заказать?</a></li>
           <li><a href="contact.html">Магазины</a></li>
-          <li><a href="about.html">О компании</a></li>
+          <li><a href="">О компании</a></li>
         </ul>
       </nav>
     </header>
@@ -70,10 +53,10 @@
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="">Каталог</a></li>
           <li><a href="">Как заказать?</a></li>
           <li><a href="contact.html">Магазины</a></li>
-          <li><a href="about.html">О компании</a></li>
+          <li><a href="">О компании</a></li>
         </ul>
       </nav>
 
@@ -82,9 +65,25 @@
 
     <section>
       <div class="container">
-        <h2 class="title">Наши <span>Магазины</span></h2>
-        <p class="subtitle">Сеть магазинов 'SnatehTAT' присутствует в каждом крупном городе Казахстана, непрерывно расширяя свое присутствие и предлагая высококачественные товары для вашего комфорта.</p>
-        <div class="shop"></div>
+        <div class="title">
+          <h2>Каталог</h2>
+          <div>
+            <input id="search-input" type="search" placeholder="Поиск">
+            <button>
+              <?xml version="1.0" ?>
+              <svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+                <title/>
+                <path d="M456.69,421.39,362.6,327.3a173.81,173.81,0,0,0,34.84-104.58C397.44,126.38,319.06,48,222.72,48S48,126.38,48,222.72s78.38,174.72,174.72,174.72A173.81,173.81,0,0,0,327.3,362.6l94.09,94.09a25,25,0,0,0,35.3-35.3ZM97.92,222.72a124.8,124.8,0,1,1,124.8,124.8A124.95,124.95,0,0,1,97.92,222.72Z" fill="var(--white)"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <hr>
+
+        <div class="categories">
+          <button class="btn">Все</button>
+        </div>
+        <div class="products catalog-products"></div>
       </div>
     </section>
 
@@ -158,6 +157,7 @@
     </footer>
 
     <script src="./src/script/archscript.js"></script>
-    <script src="./src/component/Contact/contact.js"></script>
+    <script src="./src/component/Basket/basket.js"></script>
+    <script type="module" src="./src/component/Product/product.js"></script>
   </body>
 </html>
