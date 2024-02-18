@@ -138,7 +138,7 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  gap: 10px;
+  gap: 20px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -146,17 +146,14 @@
 .basket-container .cart-item .quantity button {
   width: 32px;
   height: 32px;
-  padding: 10px;
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   display: flex;
   align-items: center;
   transition: all .3s ease;
 }
 
-.basket-container .cart-item .quantity button:hover {
-  background-color: #ccc;
+.quantity span{
+  font-size: 30px;
 }
 
 .basket-container .cart-item .price-container {
@@ -175,6 +172,25 @@
   font-size: 20px;
   border: none;
   color: red;
+}
+
+.cart-remove-btn:hover{
+  color: #000;
+  transition: 0.3s;
+}
+
+.qty-dec{
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.qty-inc{
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 /* --- MOBILE ----  */
