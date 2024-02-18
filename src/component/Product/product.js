@@ -3,6 +3,7 @@ import { products } from "../../data.js";
 const categories = document.querySelector(".categories");
 
 const allCategories = [...new Set(products.map((product) => product.category))];
+allCategories[0] = "Все";
 const listOfCategories = allCategories.map((category) => `<button class="button">${category}</button>`);
 categories.innerHTML += listOfCategories.join("");
 
@@ -55,12 +56,12 @@ function filterProduct(value) {
 
 categories.addEventListener("click", (event) => {
   const clickedButton = event.target;
-  // const noItemFoundMessage = document.querySelector('#noItemFoundMessage');
+  const noItemFoundMessage = document.querySelector("#noItemFoundMessage");
 
   if (clickedButton.classList.contains("button")) {
       const buttons = document.querySelectorAll(".button");
       buttons.forEach(button => button.classList.remove("active"));
-      // noItemFoundMessage.style.display = "none";
+      noItemFoundMessage.style.display = "none";
 
       clickedButton.classList.add("active");
       filterProduct(clickedButton.innerText);
@@ -134,4 +135,41 @@ function addToCart(event) {
   } else {
       return;
   }
+}
+
+
+async function searchFilter() {
+  const searchInputValue = document.getElementById("search-input")?.value.toLowerCase();
+  const noItemFoundMessage = document.querySelector("#noItemFoundMessage");
+
+  if (searchInputValue.length < 1) {
+    return;
+  }
+
+  const products = document.querySelectorAll(".product-card");
+  let itemFound = false;
+
+  for (const element of products) {
+    const productToLowerCase = element.innerText.toLowerCase();
+    if (productToLowerCase.includes(searchInputValue)) {
+      element.classList.remove("hide");
+      itemFound = true;
+    } else {
+      element.classList.add("hide");
+    }
+  }
+
+  if (!itemFound) {
+    noItemFoundMessage.style.display = "block";
+  } else {
+    noItemFoundMessage.style.display = "none";
+  }
+} document.getElementById("search-input")?.addEventListener("input", searchFilter);
+
+
+function showCartCounter() {
+  const cartIDs = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartCounter = document.querySelector('.basket-button');
+
+  cartCounter.innerText = cartIDs.length;
 }

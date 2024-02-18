@@ -7,28 +7,6 @@
     <title>SantehTAT</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/src/component/Contact/contact.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <style>
-      .shop {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        margin-top: 24px;
-      }
-
-      .title, .subtitle {
-        text-align: center;
-        color: var(--grey);
-      }
-
-      .title > span {
-        color: var(--primary-color);
-      }
-    </style>
   </head>
 
   <body>
@@ -84,9 +62,68 @@
 
     <section>
       <div class="container">
-        <h2 class="title">Наши <span>Магазины</span></h2>
-        <p class="subtitle">Сеть магазинов 'SnatehTAT' присутствует в каждом крупном городе Казахстана, непрерывно расширяя свое присутствие и предлагая высококачественные товары для вашего комфорта.</p>
-        <div class="shop"></div>
+        <h2>Корзина</h2>
+        <div class="basket-container">
+          <div class="my-basket">
+            <h3>Ваша Корзина</h3>
+            <div class="basket-items"></div>
+          </div>
+
+          <div class="summary"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="orderModal" class="modal">
+          <div class="modal-content">
+            <form class="form-container">
+              <div class="flex items-center justify-center flex-col">
+                <div class="form-container-title">Контактные данные</div>
+                  <div class="flex flex-col gap-4 w-[350px]">
+                    <input type="text" class="form-input" name="userName" placeholder="Ваше имя" required>
+                    <input type="text" class="form-input" name="userPhone" placeholder="Ваш номер" required>
+                    <select class="form-input" name="userAddress" id="userAddress" required>
+                      <option value="" disabled selected>Ваш адрес доставки</option>
+                      <option value="Алматы">Алматы</option>
+                      <option value="Астана">Астана</option>
+                      <option value="Орал">Орал</option>
+                      <option value="Атырау">Атырау</option>
+                      <option value="Актау">Актау</option>
+                      <option value="Кандыагаш">Кандыагаш</option>
+                    </select>
+                    <div class="input-radios mt-3">
+                      <div class="form-radio-label">
+                        <input type="radio" name="deliver" id="pickup" required="" value="Самовывоз">
+                        <label for="pickup">Самовывоз</label>
+                      </div>
+                      <div class="form-radio-label">
+                        <input type="radio" name="deliver" id="delivery" required=""
+                          value="Доставка курьером 600 тнг">
+                        <label for="delivery">Доставка курьером 600 тнг</label>
+                      </div>
+                    </div>
+                    <div class="input-radios">
+                      <h4>Какой вариант оплаты вам удобен?</h4>
+                      <div class="form-radio-label">
+                        <input type="radio" name="payment" id="cash" required="" value="Наличка">
+                        <label for="cash">Наличка</label>
+                      </div>
+                      <div class="form-radio-label">
+                        <input type="radio" name="payment" id="credit-card" required=""
+                          value="Банковская карта">
+                        <label for="credit-card">Банковская карта</label>
+                      </div>
+                    </div>
+                      <div class="form-comment">
+                        <h4 class="mt-2 mb-1">Комментарий к заказу</h4>
+                        <textarea name="userComment" class="form-input resize-none" rows="5"
+                          placeholder="Напишите сюда свои дополнительные пожелания"></textarea>
+                      </div>
+                    </div>
+                  <button class="form-button">Оформить заказ</button>
+              </div>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -159,6 +196,6 @@
       </div>
     </footer>
 
-    <script src="./src/component/Contact/contact.js"></script>
+    <script type="module" src="./src/component/Basket/basket.js"></script>
   </body>
 </html>
