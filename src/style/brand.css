@@ -1,0 +1,30 @@
+.brand-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.brand-content > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--black);
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 1000px) {
+  .brand-content {
+    grid-template-columns: repeat(2, 1fr);
+  }  
+}
+
+@media screen and (max-width: 720px) {
+  .brand-content {
+    grid-template-columns: repeat(1, 1fr);
+  }  
+}
