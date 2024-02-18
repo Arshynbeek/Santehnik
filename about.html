@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantehTAT</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/component/About/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+      .video {
+        width: 100%; 
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: #000000;
+        position: fixed;
+        margin: 0 auto;
+        top: 0;
+        height: 100vh;
+        text-align: center;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        display: none;
+
+      }
+
+      .video video {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .video img {
+        width: 4%;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+
+      .play_video {
+        width: 120px;
+        height: 120px;
+        border: solid 2px var(--primary-color);
+        margin: 0 auto;
+        border-radius: 25px;
+        cursor: pointer;
+        color: var(--primary-color);
+        background-color: var(--primary-color);
+        transition: all ease-in 0.2s;
+        position: relative;
+      }
+
+      .play_video:hover {
+        scale: 1.1;
+        color: var(--white);
+      }
+
+      .video-play-button {
+        display: block;
+        width: 104px;
+        height: 104px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -52px 0 0 -52px;
+        cursor: pointer;
+      }
+
+      .video-play-outline {
+        display: block;
+        width: 96px;
+        height: 96px;
+        border: #FFF 4px solid;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: .7;
+        transition: all 0.5s;
+      }
+
+      .video-play-circle {
+        stroke-dasharray: 315;
+        stroke-dashoffset: 315;
+        transition: stroke-dashoffset 0.5s;
+      }
+
+      .video-play-button svg {
+        display: block;
+        transform: rotate(-90deg);
+        transition: transform 0.3s;
+      }
+
+      .video-play-button:hover .video-play-circle {
+        stroke-dashoffset: 0;
+      }
+
+      .video-play-button:active .video-play-outline {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+
+      .video-play-button:active svg {
+        transform: rotate(-90deg) scale(.95);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container header">
+        <div class="head">
+          <a href="index.html">
+            <div style="width: 180px; height: 60px;">
+              <img src="./public/icon/logo.png" alt="" width="100%" height="100%" style="object-fit: cover;">
+            </div>
+          </a>
+
+          <button>C</button>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="">Каталог</a></li>
+          <li><a href="">Как заказать?</a></li>
+          <li><a href="contact.html">Магазины</a></li>
+          <li><a href="">О компании</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="menu">
+      <div class="menu-head">
+        <a href="index.html">
+          <div style="width: 180px; height: 60px;">
+            <img src="./public/icon/logo.png" alt="" width="100%" height="100%" style="object-fit: cover;">
+          </div>
+        </a>
+
+        <button>X</button>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="">Каталог</a></li>
+          <li><a href="">Как заказать?</a></li>
+          <li><a href="contact.html">Магазины</a></li>
+          <li><a href="">О компании</a></li>
+        </ul>
+      </nav>
+
+      <a href="">© 2024 MBD</a>
+    </div>
+
+    <section>
+      <div class="container">
+        <h2 class="title"><span>О</span> Нас</h2>
+        <div class="about">
+          <div>
+            <img src="./public/image/about/Santehtat1.svg" alt="">
+          </div>
+
+          <div>
+            <h3>Инженерная сантехника высшего качества с 2013 года</h3>
+            <p>С признанием качества и профессионализма, компания ТОО "Топ Азия Трейд" занимается поставками инженерной сантехники с 2013 года, став лидером в отрасли. Наш фирменный след простирается по всему Казахстану, охватывая ключевые регионы: Алматы, Астана, Шымкент, Актобе, Атырау, Уральск, Актау, где расположены наши 7 филиалов с офисами и современными складскими комплексами.</p>
+          </div>
+
+          <div>
+            <h3>Качество и надежность в каждом продукте</h3>
+            <p>Мы гордимся тем, что предоставляем нашим клиентам только самые высококачественные и сертифицированные продукты от ведущих отечественных и зарубежных производителей. Наш ассортимент насчитывает более 2000 наименований товаров, созданных на современных высокотехнологичных производствах, что гарантирует не только надежность, но и долговечность продукции.</p>
+          </div>
+
+          <div>
+            <img src="./public/image/about/Santehtat2.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="about-video-block">
+          <button class="play_video">
+            <a class="video-play-button">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 104 104" enable-background="new 0 0 104 104" xml:space="preserve">
+                <path fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10"
+                  d="M26,35h52L52,81L26,35z" />
+                <circle class="video-play-circle" fill="none" stroke="white" stroke-width="4" stroke-miterlimit="10"
+                  cx="52" cy="52" r="50" />
+              </svg>
+            </a>
+          </button>
+  
+          <div class="video">
+            <video height="80%" width="70%" controls id="videoPlayer">
+              <source id="videoSource" src="./public/video/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="./public/icon/close.png" alt="" class="close">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Наши ценности</h2>
+        <div class="service">
+          <div>
+            <span>1</span>
+            <h3>Качество и Надежность Продукции</h3>
+            <p>Компания придерживается принципа предоставления высококачественных и сертифицированных продуктов от ведущих отечественных и зарубежных производителей. Это подчеркивает стремление к предоставлению клиентам надежных и долговечных продуктов.</p>
+          </div>
+
+          <div>
+            <span>2</span>
+            <h3>Профессионализм и Признание</h3>
+            <p>С упоминанием "с признанием качества и профессионализма," компания подчеркивает свой опыт и высокий стандарт обслуживания клиентов в течение многих лет. Это говорит о стремлении к высокому профессиональному уровню в своей отрасли.</p>
+          </div>
+
+          <div>
+            <span>3</span>
+            <h3>Охват и Лидерство</h3>
+            <p>Упоминание о том, что компания стала лидером в отрасли и имеет филиалы с офисами и складами по всему Казахстану, подчеркивает ценность охвата и лидерства. Компания стремится быть присутствующей и востребованной в ключевых регионах.</p>
+          </div>
+
+          <div>
+            <span>4</span>
+            <h3>Ориентация на Клиента и Процесс</h3>
+            <p>Описание ценностей включает этапы планирования, анализа, дизайна, разработки, тестирования и отладки. Это говорит о фокусе на потребностях клиента, профессиональном проектировании, разработке и обеспечении безупречной работы продукции.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer">
+        <nav>
+          <ul>
+            <li>
+              <strong>Компания</strong>
+              <ul>
+                <li>
+                  <div>
+                    <p>Найдите ближайший к вам магазин.</p>
+                    <a href="">Посмотреть наши магазины.</a>
+                  </div>
+                </li>
+
+                <li>
+                  <div>
+                    <p>+7 771 731 28 48</p>
+                    <p>info@santehtat.kz</p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Главные страницы</strong>
+              <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Как заказать?</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="">Контакты</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Информации</strong>
+              <ul>
+                <li><a href="">Доставка</a></li>
+                <li><a href="">Оплата</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <h2>Свяжитесь с нами</h2>
+              <p>Введите свой адрес электронной почты ниже, чтобы быть первым, кто узнает о новых коллекциях и запусках продуктов.</p>
+              <input type="email">
+              <button>Subscribe</button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="foot">
+          <a href="index.html">
+            <div style="width: 180px; height: 60px;">
+              <img src="./public/icon/logo.png" alt="" width="100%" height="100%" style="object-fit: cover;">
+            </div>
+          </a>
+
+          <div>
+            <a href="">© 2024 MBD</a>
+            <button>W</button>
+            <button>F</button>
+            <button>I</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./src/script/archscript.js"></script>
+    <script src="./src/component/About/about.js"></script>
+  </body>
+</html>
