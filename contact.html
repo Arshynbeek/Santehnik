@@ -35,6 +35,10 @@
     <header>
       <div class="container header">
         <div class="head">
+          <button class="open-menu">
+            <img src="./public/icon/menu.svg" alt="">
+          </button>
+
           <a href="index.html">
             <div style="width: 180px; height: 60px;">
               <img src="./public/icon/logo.png" alt="" width="100%" height="100%" style="object-fit: cover;">
@@ -67,7 +71,9 @@
           </div>
         </a>
 
-        <button>X</button>
+        <button class="close-menu">
+          <img src="./public/icon/x-mark.svg" alt="">
+        </button>
       </div>
 
       <nav>
@@ -80,7 +86,7 @@
         </ul>
       </nav>
 
-      <a href="">© 2024 MBD</a>
+      <a href="" class="copyright">© 2024 MBD</a>
     </div>
 
     <section class="section">
@@ -107,8 +113,8 @@
 
                 <li>
                   <div>
-                    <p>+7 771 731 28 48</p>
-                    <p>info@santehtat.kz</p>
+                    <p class="footer-info">+7 771 731 28 48</p>
+                    <p class="footer-info">info@santehtat.kz</p>
                   </div>
                 </li>
               </ul>
@@ -137,8 +143,10 @@
             <li>
               <h2>Свяжитесь с нами</h2>
               <p>Введите свой адрес электронной почты ниже, чтобы быть первым, кто узнает о новых коллекциях и запусках продуктов.</p>
-              <input type="email">
-              <button>Subscribe</button>
+              <div class="footer-email">
+                <input type="email" placeholder="Введите вашу почту">
+                <button>Подписаться</button>
+              </div>
             </li>
           </ul>
         </nav>
@@ -151,17 +159,23 @@
           </a>
 
           <div>
-            <a href="">© 2024 MBD</a>
-            <button>W</button>
-            <button>F</button>
-            <button>I</button>
+            <a href="https://mbdev.kz/">© 2024 MBD</a>
+            <button class="social-contact">
+              <img src="./public/icon/whatsapp.svg" alt="">
+            </button>
+            <button class="social-contact">
+              <img src="./public/icon/facebook.svg" alt="">
+            </button>
+            <button class="social-contact">
+              <img src="./public/icon/instagram.svg" alt="">
+            </button>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="./src/script/archscript.js"></script>
     <script src="./src/component/Contact/contact.js"></script>
     <script src="https://kit.fontawesome.com/5a93b877c6.js" crossorigin="anonymous"></script>
+    <script src="./src/script/archscript.js"></script>
   </body>
 </html>

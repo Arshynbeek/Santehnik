@@ -12,6 +12,10 @@ footer {
     font-size: 14px;
     color: var(--grey);
   }
+
+  h2 {
+    margin: 0;
+  }
 }
 
 .footer {
@@ -45,4 +49,48 @@ footer nav > ul > li:last-child p {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  &>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.footer-info {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.footer-email {
+  margin-top: 24px;
+  display: flex;
+
+  input {
+    padding: 6px 0 6px 12px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid var(--grey);
+    outline: none;
+  }
+
+  button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+}
+
+.social-contact {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
 }
