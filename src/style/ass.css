@@ -1,24 +1,13 @@
-#ass{
-    .ass-title{
-        background-color: aliceblue;
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 25px;
-    }
-    
+#ass .bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
 
-    .bg-img{
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    
-    .yasin-ass{
-        background-color: var(--light-gray);
-        /* width: 100%; */
-        background-position: 40%;
-        align-items: center;
-        height: 500px;
-    }
+.ass-title {
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 25px;
 }

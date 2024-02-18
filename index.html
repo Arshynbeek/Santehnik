@@ -100,59 +100,32 @@
 
     <section id="product">
       <div class="container">
-        <div class="product-category">
-          <p>a</p>
-          <p>b</p>
-          <p>c</p>
-          <p>d</p>
-          <p>e</p>
-          <p>f</p>
-          <p>g</p>
-        </div>
-
-        <div class="new" id="new-products">
-          <div class="product-card">
-            <div class="product-image">
-              <img src="" alt="">
-              <div class="product-sale"></div>
-            </div>
-
-            <div class="product-content">
-              <p>Шаровые краны</p>
-              <small>940₸ (шт.)</small>
-            </div>
+        <div class="product-type">
+          <div>
+            <p class="new-product filter-type">Новинки</p>|
+            <p class="best-product filter-type">Хиты продаж</p>
           </div>
-        </div>
 
-        <div class="hot" id="hot-rpoducts">
+          <a href="">Показать все продукты <span>></span></a>
+        </div>
+        <hr>
+
+        <div id="categories" class="categories"></div>
+        <div class="products" id="products"></div>
+
+        <div class="product-move">
+          <button class="move move-left">
+            <img src="./public/icon/chevron.svg" style="transform: rotate(90deg);" alt="">
+          </button>
+          <button class="move move-right">
+            <img src="./public/icon/chevron.svg" style="transform: rotate(-90deg);" alt="">
+          </button>
         </div>
       </div>
     </section>
 
     <section id="brands">
       <div class="container"></div>
-    </section>
-
-    <section id="ass">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide yasin-ass bg-img" style="background-image: url('./public/image/ass/banner-1.jpg') ;">
-            <div class="container">
-              <div class="ass-title">
-                <h2>Широкий ассортимент товаров</h2>
-              </div>
-              <a href="products.html" class="btn btn-blue">Cмотреть каталог</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide yasin-ass bg-img" style="background-image: url('./public/image/ass/banner-2.jpg') ;">
-            <div class="container">
-              <h2>Широкий ассортимент товаров</h2>
-              <a href="products.html" class="btn btn-blue">Cмотреть каталог</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="why">
@@ -176,6 +149,30 @@
             <p>От ремонта до дизайна, у нас все для вашей ванной. Качественные товары от ведущих производителей. </p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section id="ass">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide yasin-ass bg-img" style="background-image: url('./public/image/ass/banner-1.jpg');">
+            <div class="container">
+              <div class="ass-title">
+                <h2>Широкий ассортимент товаров</h2>
+              </div>
+              <a href="products.html" class="btn btn-blue">Cмотреть каталог</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide yasin-ass bg-img" style="background-image: url('./public/image/ass/banner-2.jpg');">
+            <div class="container">
+              <div class="ass-title">
+                <h2>Широкий ассортимент товаров</h2>
+              </div>
+              <a href="products.html" class="btn btn-blue">Cмотреть каталог</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -257,5 +254,6 @@
     </footer>
 
     <script src="./src/component/Title/title.js"></script>
+    <script type="module" src="./src/component/Product/product.js"></script>
   </body>
 </html>
