@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function moveLeft() {
       productsElement.scrollBy({
-          left: -274,
+          left: -234,
           behavior: "smooth"
       });
   }
 
   function moveRight() {
       productsElement.scrollBy({
-          left: 274,
+          left: 234,
           behavior: "smooth"
       });
   }

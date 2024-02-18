@@ -7,7 +7,7 @@
 
   .container > a {
     position: relative;
-    border: 1px solid black;
+    border: 1px solid var(--grey);
     border-radius: 8px;
     overflow: hidden;
   }
@@ -30,18 +30,16 @@
   background-color: rgba(0, 0, 0, 0.35);
   opacity: 0;
   transition: all 0.5s;
-}
 
-.mask:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 720px) {
   #road {
     .container {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
     }
   }
 }

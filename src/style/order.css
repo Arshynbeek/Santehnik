@@ -1,71 +1,65 @@
-#order{
-    .steps{        
-        display: flex;
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 50px;
-        padding: 0;
-        flex-wrap: wrap;
+#order {
+  width: 100%;
+
+  .container:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      text-align: center;
     }
-    .steps img {
-        width: 50%;
-        margin: 0 auto;
-        padding: 0;
+  }
+
+  .steps {
+    display: flex;
+
+    &>img {
+      width: 50%;
+    }
+  }
+
+  .container:last-child {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    &>a {
+      position: relative;
+      border: 1px solid var(--grey);
+      border-radius: 8px;
+      overflow: hidden;
     }
 
-    @media (max-width: 800px) {
-        .steps {
-            width: 90%;
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    
-    .container{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 50px;
-    }
+    .mask {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 24px;
+      color: var(--white);
+      background-color: rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      transition: all 0.5s;
 
-    .container img{
-        width: 300px;
-        height: 300px;
-    }
-    a {
-        display: block;
-        position: relative;
-        width: 300px;
-        border-radius: 10px;
-        border: solid 1px black;
-        overflow: hidden;
-    }
-
-    h1{
-        font-size: 20px;
-    }
-
-    span {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding-bottom: 10%;
-        padding-left: 5%;
-    }
-    
-    span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, .5);
-        opacity: 0;
-        color: #fff;
-        font-size: 40px;
-        transition: opacity .4s linear
-    }
-    
-    span:hover {
+      &:hover {
         opacity: 1;
+      }
     }
-    
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #order {
+    .container:last-child {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

@@ -13,12 +13,16 @@
   flex-direction: column;
   gap: 8px;
   text-align: center;
+
+  &>a:hover {
+    text-decoration: underline;
+  }
 }
 
 .more-image {
   height: 240px;
   padding: 10px;
-  border: 1px solid var(--black);
+  border: 1px solid var(--grey);
   border-radius: 4px;
   overflow: hidden;
 }

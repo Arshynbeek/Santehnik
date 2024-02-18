@@ -13,8 +13,12 @@
   scroll-behavior: smooth;
 }
 
+.section {
+  padding: 40px 0px;
+}
+
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 24px;
@@ -34,6 +38,7 @@ h1 {
 
 h2 {
   font-size: 34px;
+  margin-bottom: 24px;
 }
 
 p {
@@ -91,5 +96,21 @@ hr {
 @media screen and (max-width: 720px) {
   .menu {
     display: flex;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  
+  p, a {
+    font-size: 14px;
   }
 }
