@@ -12,6 +12,13 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+}
+
 h1, h2, h3, h4, h5, h6,
 p, a, li, small, strong {
   font-family: Ubuntu, system-ui, -apple-system, sans-serif;
@@ -34,13 +41,6 @@ p {
 
 button, a {
   cursor: pointer;
-}
-
-.container {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 24px;
 }
 
 button {
