@@ -42,7 +42,7 @@ function showCartProducts() {
         <div class="price-container">
           <div class="price" data-initial-price="${product.price}">${currencyFormat(product.price * product.quantity)}</div>
           <button class="cart-remove-btn">
-            <ion-icon name="trash" aria-hidden="true" aria-hidden="true"></ion-icon>
+            <i class="fa-solid fa-trash"></i>
           </button>
         </div>
       </div>
@@ -147,6 +147,7 @@ function deleteCartItem(event) {
   cartProducts = updatedCartData;
   showCartProducts();
   showCartTotal();
+  showCartCounter();
 }
 
 //------ LocalStorage Helpers --------//
@@ -224,3 +225,4 @@ function closeModal() {
   const orderModal = document.getElementById("orderModal");
   orderModal.style.display = "none";
 }
+

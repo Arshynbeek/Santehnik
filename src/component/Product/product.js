@@ -117,12 +117,12 @@ function addToCart(event) {
   if (!isProductInCart) {
       cartData.push(product);
       localStorage.setItem("cart", JSON.stringify(cartData));
-
       Toastify({
           text: "✅ Товар добавлен в корзину",
           className: "info",
           gravity: "top",
           position: "center",
+          duration:3000,
           style: {
               background: "#fff",
               color: '#000',
@@ -169,7 +169,8 @@ async function searchFilter() {
 
 function showCartCounter() {
   const cartIDs = JSON.parse(localStorage.getItem('cart')) || [];
-  const cartCounter = document.querySelector('.basket-button');
+  const cartCounter = document.querySelector('.count');
 
+  document.querySelector(".count").innerHTML = cartIDs.length;
   cartCounter.innerText = cartIDs.length;
 }

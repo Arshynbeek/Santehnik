@@ -38,3 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
   moveLeftButton.addEventListener("click", moveLeft);
   moveRightButton.addEventListener("click", moveRight);
 });
+
+function showCartCounter() {
+  const cartIDs = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartCounter = document.querySelector('.count');
+
+  document.querySelector(".count").innerHTML = cartIDs.length;
+  cartCounter.innerText = cartIDs.length;
+}
+
+showCartCounter();

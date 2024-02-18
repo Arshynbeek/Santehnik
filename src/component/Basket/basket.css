@@ -43,6 +43,12 @@
   flex-wrap: wrap;
 }
 
+.count{
+  font-weight: 500;
+  color: white;
+  background-color: black;
+}
+
 
 @media screen and (max-width: 720px) {
   .title {
@@ -165,16 +171,10 @@
   font-weight: 700;
 }
 
-.basket-container .cart-item .price-container .cart-remove-btn {
-  font-size: 1.5em;
-  color: #f13b3b;
-  align-self: end;
-  cursor: pointer !important;
-  transition: all .3 ease;
-}
-
-.basket-container .cart-item .price-container .cart-remove-btn:hover {
-  color: #f66161;
+.cart-remove-btn{
+  font-size: 20px;
+  border: none;
+  color: red;
 }
 
 /* --- MOBILE ----  */
