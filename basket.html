@@ -86,12 +86,16 @@
           <div class="modal-content">
             <form class="form-container">
               <div class="flex items-center justify-center flex-col">
-                <div class="form-container-title">Контактные данные</div>
+                <div class="form-container-title">
+                  <h3>Контактные данные</h3>
+                </div>
                   <div class="flex flex-col gap-4 w-[350px]">
                     <input type="text" class="form-input" name="userName" placeholder="Ваше имя" required>
                     <input type="text" class="form-input" name="userPhone" placeholder="Ваш номер" required>
                     <select class="form-input" name="userAddress" id="userAddress" required>
-                      <option value="" disabled selected>Ваш адрес доставки</option>
+                      <option value="" disabled selected>
+                        <p>Ваш адрес доставки</p>
+                      </option>
                       <option value="Алматы">Алматы</option>
                       <option value="Астана">Астана</option>
                       <option value="Орал">Орал</option>
@@ -102,28 +106,40 @@
                     <div class="input-radios mt-3">
                       <div class="form-radio-label">
                         <input type="radio" name="deliver" id="pickup" required="" value="Самовывоз">
-                        <label for="pickup">Самовывоз</label>
+                        <label for="pickup">
+                          <small>Самовывоз</small>
+                        </label>
                       </div>
                       <div class="form-radio-label">
                         <input type="radio" name="deliver" id="delivery" required=""
                           value="Доставка курьером 600 тнг">
-                        <label for="delivery">Доставка курьером 600 тнг</label>
+                        <label for="delivery">
+                          <small>Доставка курьером 600 тнг</small>
+                        </label>
                       </div>
                     </div>
                     <div class="input-radios">
-                      <h4>Какой вариант оплаты вам удобен?</h4>
+                      <h4>
+                        <p>Какой вариант оплаты вам удобен?</p>
+                      </h4>
                       <div class="form-radio-label">
                         <input type="radio" name="payment" id="cash" required="" value="Наличка">
-                        <label for="cash">Наличка</label>
+                        <label for="cash">
+                          <small>Наличка</small>
+                        </label>
                       </div>
                       <div class="form-radio-label">
                         <input type="radio" name="payment" id="credit-card" required=""
                           value="Банковская карта">
-                        <label for="credit-card">Банковская карта</label>
+                        <label for="credit-card">
+                          <small>Банковская карта</small>
+                        </label>
                       </div>
                     </div>
                       <div class="form-comment">
-                        <h4 class="mt-2 mb-1">Комментарий к заказу</h4>
+                        <h4 class="mt-2 mb-1">
+                          <p>Комментарий к заказу</p>
+                        </h4>
                         <textarea name="userComment" class="form-input resize-none" rows="5"
                           placeholder="Напишите сюда свои дополнительные пожелания"></textarea>
                       </div>

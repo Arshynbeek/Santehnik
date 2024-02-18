@@ -124,6 +124,7 @@ function addToCart(event) {
           position: "center",
           duration:3000,
           style: {
+              "font-family": "Ubuntu, sans-serif",
               background: "#fff",
               color: '#000',
               "border-radius": "7px",

@@ -23,7 +23,7 @@ function loadCartData() {
 
 function showCartProducts() {
   if (isEmptyArray(cartProducts)) {
-    cartContainer.innerHTML = "Оппана, ваша корзина пуста!";
+    cartContainer.innerHTML = "<p>Оппана, ваша корзина пуста!</p>";
     return;
   }
 
@@ -33,7 +33,9 @@ function showCartProducts() {
     cartItems.innerHTML += `
       <div class="cart-item" data-id="${product.id}">
         <img src="${product.image}" alt="${product.name}">
-        <div class="title">${product.name}</div>
+        <div class="title">
+          <p>${product.name}</p>
+        </div>
         <div class="quantity">
           <button class="qty-dec">-</button>
           <span>${product.quantity}</span>
@@ -74,15 +76,15 @@ function showCartTotal() {
   }
 
   cartRightSide.innerHTML = `
-    <div class="flex">
-      <span>Товары, ${totalProducts} шт.</span>
-      <span>${currencyFormat(totalPrice)} </span>
+    <div class="flex items-end">
+      <span><p>Товары, ${totalProducts} шт.</p></span>
+      <span><p>${currencyFormat(totalPrice)}</p></span>
     </div>
-    <div class="flex">
-      <span>Итого</span>
-      <span>${currencyFormat(totalPrice)} </span>
+    <div style="margin-top: 10px;" class="flex items-end">
+      <span><h3>Итого</h3></span>
+      <span><p>${currencyFormat(totalPrice)}</p></span>
     </div>
-    <button id="order-button">Заказать</button>
+    <button style="margin-top: 10px;" id="order-button">Заказать</button>
   `;
 
   // Add an event listener to the "order-button" to show the modal
