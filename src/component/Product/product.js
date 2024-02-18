@@ -30,10 +30,11 @@ function showProductsList() {
     </div>
     `
   }
-}
 
-showProductsList();
-
+  document.querySelectorAll(".buy-button").forEach(button => {
+    button.addEventListener("click", addToCart);
+  });
+} showProductsList();
 
 
 function filterProduct(value) {
@@ -105,26 +106,32 @@ function generateProductCardHTML(product) {
 }
 
 
+function addToCart(event) {
+  const productId = event.currentTarget.closest(".buy").dataset.id;
+  const product = products.find(product => product.id === Number(productId));
 
-document.addEventListener('DOMContentLoaded', function() {
-  const moveLeftButton = document.querySelector('.move-left');
-  const moveRightButton = document.querySelector('.move-right');
-  const productsElement = document.getElementById('products');
+  const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  const isProductInCart = cartData.some(cartProduct => cartProduct.id === product.id);
 
-  function moveLeft() {
-      productsElement.scrollBy({
-          left: -274,
-          behavior: "smooth"
-      });
+  if (!isProductInCart) {
+      cartData.push(product);
+      localStorage.setItem("cart", JSON.stringify(cartData));
+
+      Toastify({
+          text: "✅ Товар добавлен в корзину",
+          className: "info",
+          gravity: "top",
+          position: "center",
+          style: {
+              background: "#fff",
+              color: '#000',
+              "border-radius": "7px",
+              width: "300px"
+          }
+      }).showToast();
+
+      showCartCounter();
+  } else {
+      return;
   }
-
-  function moveRight() {
-      productsElement.scrollBy({
-          left: 274,
-          behavior: "smooth"
-      });
-  }
-
-  moveLeftButton.addEventListener("click", moveLeft);
-  moveRightButton.addEventListener("click", moveRight);
-});
+}

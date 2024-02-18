@@ -15,4 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
     image.addEventListener("mouseenter", styleImage);
     image.addEventListener("mouseleave", resetImage);
   });
+
+
+  const moveLeftButton = document.querySelector(".move-left");
+  const moveRightButton = document.querySelector(".move-right");
+  const productsElement = document.getElementById("products");
+
+  function moveLeft() {
+      productsElement.scrollBy({
+          left: -274,
+          behavior: "smooth"
+      });
+  }
+
+  function moveRight() {
+      productsElement.scrollBy({
+          left: 274,
+          behavior: "smooth"
+      });
+  }
+
+  moveLeftButton.addEventListener("click", moveLeft);
+  moveRightButton.addEventListener("click", moveRight);
 });
