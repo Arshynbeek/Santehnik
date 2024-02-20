@@ -159,7 +159,7 @@
 
     .product-image {
       width: 100%;
-      height: calc(12vh + 250px);
+      height: calc(8vh + 4vw + 200px);
       position: relative;
       display: flex;
       justify-content: center;
