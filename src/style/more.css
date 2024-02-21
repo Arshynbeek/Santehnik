@@ -52,6 +52,21 @@
   .more-card {
     width: 360px;
   }
+
+  #partners img {
+    width: 100px;
+    transition: all 1s ease;
+  }
+  
+  #partners img:hover{
+    scale: 1.1;
+  }
+  
+  #partners .brand-content {
+    display: block;
+    align-items: center;
+  }
+  
 }
 
 
@@ -65,7 +80,11 @@
 }
 
 #partners .brand-content {
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+}
+
+#partners .brand-content div{
+  margin-top: 50px;
 }
