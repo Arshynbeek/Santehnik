@@ -105,6 +105,11 @@
   border: none;
 }
 
+.all-products {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
 .product-move {
   position: absolute;
   top: 50%;

@@ -1,110 +1,151 @@
-import { products } from "../../data.js";
+import { products, parentCategory, category, subCategory } from "../../data.js";
 
-const categories = document.querySelector(".categories");
+const categoriesDiv = document.querySelector(".categories");
+const productsDiv = document.querySelector(".products");
+const noItemFoundMessage = document.getElementById("noItemFoundMessage");
 
-const allCategories = [...new Set(products.map((product) => product.category))];
-allCategories.unshift("Все");
-const listOfCategories = allCategories.map((category) => `<button class="button">${category}</button>`);
-categories.innerHTML = listOfCategories.join("");
-
-const productCards = document.querySelector(".products");
-
-function showProductsList() {
-  productCards.innerHTML = "";
-  for (const product of products) {
-    productCards.innerHTML += `
-    <div class="product-card" data-category="${product.category}">
-      <div class="product-image">
-      <img src="${product.image}" alt="${product.name}">
-        ${product.hasDiscount ? `<div class="product-sale" aria-label="20% off">-20%</div>` : ''}
-      </div>
-
-      <div class="product-content">
-        <div class="product-info">
-          <p class="product-name">${product.name}</p>
-          <small>${product.price}₸ (шт.)</small>
-        </div>
-        <div class="buy" data-id="${product.id}">
-          <button class="buy-button" aria-label="add to cart">КУПИТЬ</button>
-        </div>
-      </div>
-    </div>
-    `
-  }
-
-  document.querySelectorAll(".buy-button").forEach(button => {
-    button.addEventListener("click", addToCart);
-  });
-} showProductsList();
-
-
-function filterProduct(value) {
-  const products = document.querySelectorAll(".product-card");
-  products.forEach((element) => {
-    if (value == "Все") {
-      element.classList.remove("hide");
-    } else {
-      const productElement = element.getAttribute("data-category");
-      if (productElement === value) {
-        element.classList.remove("hide");
-      } else {
-        element.classList.add("hide");
-      }
-    }
-  })
+function init() {
+  displayParentCategories();
+  showAllProducts();
 }
 
-categories.addEventListener("click", (event) => {
-  const clickedButton = event.target;
-  const noItemFoundMessage = document.getElementById("noItemFoundMessage");
+function displayParentCategories() {
+  const parentCategoriesButtons = parentCategory.map((pc) => `<button class="button parent-category" data-id="${pc.id}">${pc.name}</button>`).join("");
+  categoriesDiv.innerHTML = `<button class="button all-products">Все продукты</button>` + parentCategoriesButtons;
 
-  if (clickedButton.classList.contains("button")) {
-    const buttons = document.querySelectorAll(".button");
-    buttons.forEach(button => button.classList.remove("active"));
-    noItemFoundMessage.style.display = "none";
+  document.querySelectorAll(".parent-category").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      displayCategories(event.target.dataset.id);
 
-    clickedButton.classList.add("active");
-    filterProduct(clickedButton.innerText);
+      if (event.target.classList.contains("button")) {
+        document.querySelectorAll(".button").forEach(button => button.classList.remove("active"));
+      }
+      event.target.classList.add("active");
+    });
+  });
+
+  document.querySelector(".all-products").addEventListener("click", showAllProducts);
+  document.querySelector(".all-products").addEventListener("click", displayParentCategories);
+}
+
+function displayCategories(parentCategoryId) {
+  const filteredCategories = category.filter((c) => c.parentID == parentCategoryId);
+  if (filteredCategories.length > 0) {
+    const categoryButtons = filteredCategories.map((c) => `<button class="button category" data-id="${c.id}">${c.name}</button>`).join("");
+    categoriesDiv.innerHTML = `<button class="button all-products">Все продукты</button>` + categoryButtons;
+
+    document.querySelectorAll(".category").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        displaySubCategoriesOrProducts(event.target.dataset.id, parentCategoryId)
+
+        if (event.target.classList.contains("button")) {
+          document.querySelectorAll(".button").forEach(button => button.classList.remove("active"));
+        }
+        event.target.classList.add("active");
+      });
+    });
+  } else {
+    filterProductsByParentCategory(parentCategoryId);
   }
-});
 
+  document.querySelector(".all-products").addEventListener("click", showAllProducts);
+  document.querySelector(".all-products").addEventListener("click", displayParentCategories);
+}
+
+function displaySubCategoriesOrProducts(categoryId, parentCategoryId) {
+  const filteredSubCategories = subCategory.filter((sc) => sc.categoryID == categoryId);
+  if (filteredSubCategories.length > 0) {
+    const subCategoryButtons = filteredSubCategories.map((sc) => `<button class="button sub-category" data-id="${sc.id}">${sc.name}</button>`).join("");
+    categoriesDiv.innerHTML = `<button class="button all-products">Все продукты</button>` +subCategoryButtons;
+
+    document.querySelectorAll(".sub-category").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        filterProductsBySubCategory(button.dataset.id)
+
+        if (event.target.classList.contains("button")) {
+          document.querySelectorAll(".button").forEach(button => button.classList.remove("active"));
+        }
+        event.target.classList.add("active");
+      });
+    });
+  } else {
+    filterProductsByCategory(categoryId, parentCategoryId);
+  }
+
+  document.querySelector(".all-products").addEventListener("click", showAllProducts);
+  document.querySelector(".all-products").addEventListener("click", displayParentCategories);
+}
+
+function filterProductsByParentCategory(parentCategoryId) {
+  const filteredProducts = products.filter((p) => p.parentCategoryID == parentCategoryId);
+  displayProducts(filteredProducts);
+}
+
+function filterProductsByCategory(categoryId, parentCategoryId) {
+  const filteredProducts = products.filter((p) => p.categoryID == categoryId || p.parentCategoryID == parentCategoryId);
+  displayProducts(filteredProducts);
+}
+
+function filterProductsBySubCategory(subCategoryId) {
+  const filteredProducts = products.filter((p) => p.subCategoryID == subCategoryId);
+  displayProducts(filteredProducts);
+}
+
+function showAllProducts() {
+  displayProducts(products);
+}
+
+function displayProducts(filteredProducts) {
+  if (filteredProducts.length === 0) {
+    noItemFoundMessage.style.display = "block";
+    productsDiv.innerHTML = "";
+  } else {
+    noItemFoundMessage.style.display = "none";
+    productsDiv.innerHTML = filteredProducts.map((product) => `
+      <div class="product-card" data-category="${product.categoryID}">
+        <div class="product-image">
+          <img src="${product.image}" alt="${product.name}">
+          ${ product.hasDiscount ? `<div class="product-sale">-20%</div>` : "" }
+        </div>
+
+        <div class="product-content">
+          <div class="product-info">
+            <p class="product-name">${product.name}</p>
+            <small>${product.price}₸ (шт.)</small>
+          </div>
+          <div class="buy" data-id="${product.id}">
+            <button class="buy-button" aria-label="add to cart">КУПИТЬ</button>
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+    document.querySelectorAll(".buy-button").forEach((button) => {
+      button.addEventListener("click", addToCart);
+    });
+  }
+}
 
 
 Array.from(document.getElementsByClassName("filter-type")).forEach((item) => {
   item.addEventListener("click", (event) => {
     const button = event.target;
-    productCards.innerHTML = "";
+    productsDiv.innerHTML = "";
 
     document.querySelectorAll(".filter-type").forEach(i => i.classList.remove("activation"));
     button.classList.add("activation");
 
     if (button.classList.contains("new-product")) {
       products.filter(product => product.isNew).forEach(product => {
-        productCards.innerHTML += generateProductCardHTML(product);
+        productsDiv.innerHTML += generateProductCardHTML(product);
       });
     } else if (button.classList.contains("best-product")) {
       products.filter(product => product.bestseller).forEach(product => {
-        productCards.innerHTML += generateProductCardHTML(product);
+        productsDiv.innerHTML += generateProductCardHTML(product);
       });
     }
   });
 });
-
-function generateProductCardHTML(product) {
-  return `
-    <div class="product-card" data-category="${product.category}">
-      <div class="product-image">
-        <img src="${product.image}" alt="${product.name}">
-        ${product.hasDiscount ? `<div class="product-sale" aria-label="20% off">-20%</div>` : ''}
-      </div>
-
-      <div class="product-content">
-        <p>${product.name}</p>
-        <small>${product.price}₸ (шт.)</small>
-      </div>
-    </div>
-  `;
-}
 
 
 function addToCart(event) {
@@ -175,3 +216,5 @@ function showCartCounter() {
   document.querySelector(".count").innerHTML = cartIDs.length;
   cartCounter.innerText = cartIDs.length;
 }
+
+init();

@@ -1,0 +1,407 @@
+export const products = [
+  {
+    id: 1,
+    name: 'Шаровые краны',
+    price: '940',
+    unit: 'шт',
+    image: '../../../public/image/product/image-1.jpeg',
+    hasDiscount: true,
+    isNew: true,
+    bestseller: false,
+    quantity: 1,
+    parentCategoryID: null,
+    categoryID: null,
+    subCategory: null,
+  },
+  {
+    id: 2,
+    name: 'Смесители для ванн',
+    price: '45480',
+    unit: 'шт',
+    image: '../../../public/image/product/image-2.jpeg',
+    hasDiscount: false,
+    isNew: true,
+    bestseller: true,
+    quantity: 1,
+    parentCategoryID: 10,
+    categoryID: 24,
+    subCategoryID: 1,
+  },
+  {
+    id: 3,
+    name: 'Шуруповерты',
+    price: '48100',
+    unit: 'шт',
+    image: '../../../public/image/product/image-3.jpeg',
+    hasDiscount: true,
+    isNew: true,
+    bestseller: true,
+    quantity: 1,
+    parentCategoryID: null,
+    categoryID: null,
+    subCategory: null,
+  },
+  {
+    id: 4,
+    name: 'Перфораторы',
+    price: '64123',
+    unit: 'шт',
+    image: '../../../public/image/product/image-4.jpeg',
+    hasDiscount: false,
+    isNew: true,
+    bestseller: true,
+    quantity: 1,
+    parentCategoryID: null,
+    categoryID: null,
+    subCategory: null,
+  },
+  {
+    id: 5,
+    name: 'Фильтра для воды',
+    price: '72999',
+    unit: 'шт',
+    image: '../../../public/image/product/image-5.jpeg',
+    hasDiscount: false,
+    isNew: true,
+    bestseller: false,
+    quantity: 1,
+    parentCategoryID: 12,
+    categoryID: null,
+    subCategory: null,
+  },
+  {
+    id: 6,
+    name: 'Газовый ключ',
+    price: '10000',
+    unit: 'шт',
+    image: '../../../public/image/product/image-6.jpeg',
+    hasDiscount: true,
+    isNew: true,
+    bestseller: false,
+    quantity: 1,
+    parentCategoryID: null,
+    categoryID: null,
+    subCategory: null,
+  },
+  {
+    id: 7,
+    name: 'Трап',
+    price: '15000',
+    unit: 'шт',
+    image: '../../../public/image/product/image-7.jpeg',
+    hasDiscount: false,
+    isNew: false,
+    bestseller: true,
+    quantity: 1,
+    parentCategoryID: 6,
+    categoryID: 14,
+    subCategory: null,
+  },
+  {
+    id: 8,
+    name: 'Трап 2',
+    price: '17000',
+    unit: 'шт',
+    image: '../../../public/image/product/image-7.jpeg',
+    hasDiscount: false,
+    isNew: false,
+    bestseller: true,
+    quantity: 1,
+    parentCategoryID: 6,
+    categoryID: 14,
+    subCategory: null,
+  },
+  {
+    id: 9,
+    name: 'Алюминиевые радиаторы',
+    price: '45400',
+    unit: 'шт',
+    image: '../../../public/image/product/image-8.jpeg',
+    hasDiscount: true,
+    isNew: false,
+    bestseller: true,
+    quantity: 1,
+    parentCategoryID: 4,
+    categoryID: 8,
+    subCategory: null,
+  },
+  {
+    id: 10,
+    name: 'Резьбовые фитинги',
+    price: '500',
+    unit: 'шт',
+    image: '../../../public/image/product/image-9.jpeg',
+    hasDiscount: true,
+    isNew: false,
+    bestseller: true,
+    quantity: 1,
+    parentCategoryID: 5,
+    categoryID: 11,
+    subCategory: null,
+  },
+];
+
+
+export const category = [
+  {
+    id: 0,
+    name: 'Другие',
+    categories: [
+      {
+        id: 25,
+        name: 'Сифоны',
+        subCategories: []
+      },
+      {
+        id: 26,
+        name: 'Гибкая подводка',
+        subCategories: []
+      },
+      {
+        id: 27,
+        name: 'Шланги',
+        subCategories: [
+          {
+            id: 5,
+            name: 'Сливые'
+          },
+          {
+            id: 6,
+            name: 'Наливные'
+          },
+          {
+            id: 7,
+            name: 'поливочные'
+          },
+        ]
+      },
+      {
+        id: 28,
+        name: 'Арматура для унитаза',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 1,
+    name: 'Котлы гозовые',
+    categories: [
+      {
+        id: 1,
+        name: 'Напольные',
+        subCategories: []
+      },
+      {
+        id: 2,
+        name: 'Настенные',
+        subCategories: []
+      },
+    ]
+
+  },
+  {
+    id: 2,
+    name: 'Котельное оборудование',
+    categories: [
+      {
+        id: 3,
+        name: 'Бак расширительный',
+        subCategories: []
+      },
+      {
+        id: 4,
+        name: 'Группа безовасности',
+        subCategories: []
+      },
+      {
+        id: 5,
+        name: 'Гидрострелки и коллекторы',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 3,
+    name: 'Теплый пол',
+    categories: [
+      {
+        id: 6,
+        name: 'Трубы для теплого пола',
+        subCategories: []
+      },
+      {
+        id: 7,
+        name: 'Коллекторы для теплого пола',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 4,
+    name: 'Радиаторы',
+    categories: [
+      {
+        id: 8,
+        name: 'Алюминиевые',
+        subCategories: []
+      },
+      {
+        id: 9,
+        name: 'Биметаллические',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 5,
+    name: 'ППР труба и фитинги',
+    categories: [
+      {
+        id: 10,
+        name: 'Трубы',
+        subCategories: []
+      },
+      {
+        id: 11,
+        name: 'ППР фитинги',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 6,
+    name: 'Канализационные трубы и фитинги',
+    categories: [
+      {
+        id: 12,
+        name: 'Канализационные трубы',
+        subCategories: []
+      },
+      {
+        id: 13,
+        name: 'Канализационные фитинги',
+        subCategories: []
+      },
+      {
+        id: 14,
+        name: 'Трапы',
+        subCategories: []
+      },
+      {
+        id: 15,
+        name: 'Жироуловители',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 7,
+    name: 'Счетчики для воды',
+    categories: []
+  },
+  {
+    id: 8,
+    name: 'Водонагреватели',
+    categories: [
+      {
+        id: 16,
+        name: 'Электрические',
+        subCategories: []
+      },
+      {
+        id: 17,
+        name: 'Косвенные',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 9,
+    name: 'Насосное оборудование',
+    categories: [
+      {
+        id: 18,
+        name: 'Насосное оборудование',
+        subCategories: []
+      },
+      {
+        id: 19,
+        name: 'Насосные станции',
+        subCategories: []
+      },
+      {
+        id: 20,
+        name: 'Насосные станции многоступенчатые',
+        subCategories: []
+      },
+      {
+        id: 21,
+        name: 'Погружные насосы',
+        subCategories: []
+      },
+      {
+        id: 22,
+        name: 'Скважинные насосы',
+        subCategories: []
+      },
+      {
+        id: 23,
+        name: 'Комплектующие и аксессуары для насосного оборудования',
+        subCategories: []
+      },
+    ]
+  },
+  {
+    id: 10,
+    name: 'Сантехника',
+    categories: [
+      {
+        id: 24,
+        name: 'Смесители',
+        subCategories: [
+          {
+            id: 1,
+            name: 'Для ванны'
+          },
+          {
+            id: 2,
+            name: 'Для раковины'
+          },
+          {
+            id: 3,
+            name: 'Для душа'
+          },
+          {
+            id: 4,
+            name: 'Стойки для душа'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    id: 11,
+    name: 'Полотенцесушители',
+    categories: []
+  },
+  {
+    id: 12,
+    name: 'Фильтры для очистки воды',
+    categories: []
+  },
+  {
+    id: 13,
+    name: 'Стабилизаторы',
+    categories: []
+  },
+]
+
+
+export const citiesData = new Map([
+  ['Алматы', '+77717312848'],
+  ['Астана', '+77013005414'],
+  ['Орал', '+77717888891'],
+  ['Атырау', '+77715655335'],
+  ['Актау', '+77010818618'],
+  ['Кандыагаш', '+77010818615'],
+])
