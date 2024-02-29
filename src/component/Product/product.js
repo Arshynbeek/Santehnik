@@ -148,6 +148,23 @@ Array.from(document.getElementsByClassName("filter-type")).forEach((item) => {
 });
 
 
+function generateProductCardHTML(product) {
+  return `
+    <div class="product-card" data-category="${product.category}">
+      <div class="product-image">
+        <img src="${product.image}" alt="${product.name}">
+        ${product.hasDiscount ? `<div class="product-sale" aria-label="20% off">-20%</div>` : ''}
+      </div>
+
+      <div class="product-content">
+        <p>${product.name}</p>
+        <small>${product.price}₸ (шт.)</small>
+      </div>
+    </div>
+  `;
+}
+
+
 function addToCart(event) {
   const productId = event.currentTarget.closest(".buy").dataset.id;
   const product = products.find(product => product.id === Number(productId));
