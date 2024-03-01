@@ -11,7 +11,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: null,
     categoryID: null,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: null,
     categoryID: null,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: null,
     categoryID: null,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: 12,
     categoryID: null,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: null,
     categoryID: null,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: 6,
     categoryID: 14,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: 6,
     categoryID: 14,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: 4,
     categoryID: 8,
-    subCategory: null,
+    subCategoryID: null,
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const products = [
     quantity: 1,
     parentCategoryID: 5,
     categoryID: 11,
-    subCategory: null,
+    subCategoryID: null,
   },
 ];
 

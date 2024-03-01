@@ -56,11 +56,11 @@ function displaySubCategoriesOrProducts(categoryId, parentCategoryId) {
   const filteredSubCategories = subCategory.filter((sc) => sc.categoryID == categoryId);
   if (filteredSubCategories.length > 0) {
     const subCategoryButtons = filteredSubCategories.map((sc) => `<button class="button sub-category" data-id="${sc.id}">${sc.name}</button>`).join("");
-    categoriesDiv.innerHTML = `<button class="button all-products">Все продукты</button>` +subCategoryButtons;
+    categoriesDiv.innerHTML = `<button class="button all-products">Все продукты</button>` + subCategoryButtons;
 
     document.querySelectorAll(".sub-category").forEach((button) => {
       button.addEventListener("click", (event) => {
-        filterProductsBySubCategory(button.dataset.id)
+        filterProductsBySubCategory(event.target.dataset.id, categoryId, parentCategoryId)
 
         if (event.target.classList.contains("button")) {
           document.querySelectorAll(".button").forEach(button => button.classList.remove("active"));
@@ -82,12 +82,12 @@ function filterProductsByParentCategory(parentCategoryId) {
 }
 
 function filterProductsByCategory(categoryId, parentCategoryId) {
-  const filteredProducts = products.filter((p) => p.categoryID == categoryId || p.parentCategoryID == parentCategoryId);
+  const filteredProducts = products.filter((p) => p.categoryID == categoryId && p.parentCategoryID == parentCategoryId);
   displayProducts(filteredProducts);
 }
 
-function filterProductsBySubCategory(subCategoryId) {
-  const filteredProducts = products.filter((p) => p.subCategoryID == subCategoryId);
+function filterProductsBySubCategory(subCategoryId, categoryId, parentCategoryId) {
+  const filteredProducts = products.filter((p) => p.subCategoryID == subCategoryId && p.categoryID == categoryId && p.parentCategoryID == parentCategoryId);
   displayProducts(filteredProducts);
 }
 
