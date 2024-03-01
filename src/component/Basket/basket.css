@@ -39,11 +39,18 @@
   outline: none;
 }
 
+.block {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+
 .catalog-products {
   flex-wrap: wrap;
 }
 
-.count{
+.count {
   font-weight: 500;
   color: white;
   background-color: black;
@@ -51,6 +58,12 @@
 
 
 @media screen and (max-width: 720px) {
+  .block {
+    display: initial;
+    align-items: initial;
+    justify-content: initial;
+  }
+
   .title {
     flex-direction: column;
     align-items: start;
