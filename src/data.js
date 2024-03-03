@@ -145,55 +145,79 @@ export const products = [
 export const parentCategory = [
   {
     id: 1,
-    name: 'Котлы гозовые'
+    name: 'Котлы газовые',
+    image: "https://avatars.mds.yandex.net/i?id=8657e27406d8e85f6e201358af3bf28ddc30c94c-5177089-images-thumbs&n=13"
   },
   {
     id: 2,
-    name: 'Котельное оборудование'
+    name: 'Котельное оборудование',
+    image: "https://avatars.mds.yandex.net/i?id=152d900e5e2b3dedc7e409bd75e529ffccbd3253-5219738-images-thumbs&n=13"
   },
   {
     id: 3,
-    name: 'Теплый пол'
+    name: 'Теплый пол',
+    image: "https://avatars.mds.yandex.net/i?id=3eb4246bccf05665abcc50eee95dc0c522a237ca-4778614-images-thumbs&n=13"
+
   },
   {
     id: 4,
-    name: 'Радиаторы'
+    name: 'Радиаторы',
+    image: "https://avatars.mds.yandex.net/i?id=c6af1f9c62f68e69ca9f86de333d916c87ea63f4-12319660-images-thumbs&n=13"
+
   },
   {
     id: 5,
-    name: 'ППР труба и фитинги'
+    name: 'ППР труба и фитинги',
+    image: "https://avatars.mds.yandex.net/i?id=b2ea81236decda6ba1d9191c3a8b2bd25ba8ddeb-5859076-images-thumbs&n=13"
+
   },
   {
     id: 6,
-    name: 'Канализационные трубы и фитинги'
+    name: 'Канализационные трубы и фитинги',
+    image: "https://avatars.mds.yandex.net/i?id=960249963733dadcc917bfb440a0946764fc113e-9056327-images-thumbs&n=13"
+
   },
   {
     id: 7,
-    name: 'Счетчики для воды'
+    name: 'Счетчики для воды',
+    image: "https://avatars.mds.yandex.net/i?id=d407806ebdccd8682e9f631ed28f2cc74eeb3061-10859624-images-thumbs&n=13"
+
   },
   {
     id: 8,
-    name: 'Водонагреватели'
+    name: 'Водонагреватели',
+    image: "https://avatars.mds.yandex.net/i?id=6b90ef4601692e4104b79ebbe589cf1c65112896-10216894-images-thumbs&n=13"
+
   },
   {
     id: 9,
-    name: 'Насосное оборудование'
+    name: 'Насосное оборудование',
+    image: "https://avatars.mds.yandex.net/i?id=c99ce02098d85bbdc5dad9fccd80415c5c180dec-10369171-images-thumbs&n=13"
+
   },
   {
     id: 10,
-    name: 'Сантехника'
+    name: 'Сантехника',
+    image: "https://avatars.mds.yandex.net/i?id=08f374b93d490925f2946c87f98cf9734c06fd6d-12486332-images-thumbs&n=13"
+
   },
   {
     id: 11,
-    name: 'Полотенцесушители'
+    name: 'Полотенцесушители',
+    image: "https://avatars.mds.yandex.net/i?id=c7b64a1962d3612d179facd4dba14b43dca6a74f-4952143-images-thumbs&n=13"
+
   },
   {
     id: 12,
-    name: 'Фильтры для очистки воды'
+    name: 'Фильтры для очистки воды',
+    image: "https://avatars.mds.yandex.net/i?id=f5fb7cb4eb39b3fa3af32a39b076c6628754b433-10686310-images-thumbs&n=13"
+
   },
   {
     id: 13,
-    name: 'Стабилизаторы'
+    name: 'Стабилизаторы',
+    image: "https://avatars.mds.yandex.net/i?id=027ddfd8fc491543ab60017102590da3748d68f6-8343339-images-thumbs&n=13"
+
   }
 ]
 

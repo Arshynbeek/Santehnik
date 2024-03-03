@@ -10,7 +10,7 @@ function init() {
 }
 
 function displayParentCategories() {
-  const parentCategoriesButtons = parentCategory.map((pc) => `<button class="button parent-category" data-id="${pc.id}">${pc.name}</button>`).join("");
+  const parentCategoriesButtons = parentCategory.map((pc) => `<button class="button parent-category" data-id="${pc.id}"> <img src="${pc.image}" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">  ${pc.name}</button>`).join("");
   categoriesDiv.innerHTML = `<button class="button all-products">Все продукты</button>` + parentCategoriesButtons;
 
   document.querySelectorAll(".parent-category").forEach((button) => {

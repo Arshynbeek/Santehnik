@@ -170,3 +170,11 @@ hr {
     font-size: 14px;
   }
 }
+
+.parent-category,  .category, .all-products{
+  border-radius: 1px;  
+  border: solid 5px rgb(244, 231, 231);
+  text-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
