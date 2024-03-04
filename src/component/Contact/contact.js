@@ -47,6 +47,12 @@ const addressData = [
     number: "",
     email: "shymkent@santehtat.kz",
   },
+  {
+    city: "Актобе",
+    address: '',
+    number: "",
+    email: "aktobe@santehtat.kz",
+  },
 ];
 const contact = document.querySelector(".shop");
 
