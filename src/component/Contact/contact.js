@@ -41,6 +41,12 @@ const addressData = [
     number: "+7 701 081 86 15",
     email: "aktobe@santehtat.kz",
   },
+  {
+    city: "Шымкент",
+    address: '',
+    number: "",
+    email: "shymkent@santehtat.kz",
+  },
 ];
 const contact = document.querySelector(".shop");
 
