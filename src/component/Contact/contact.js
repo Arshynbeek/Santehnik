@@ -49,8 +49,8 @@ const addressData = [
   },
   {
     city: "Актобе",
-    address: '',
-    number: "",
+    address: 'пр-т 312 Стрелковой Дивизии 5Г, 1 этаж',
+    number: "+7 701 300 53 78",
     email: "aktobe@santehtat.kz",
   },
 ];
