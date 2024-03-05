@@ -4,7 +4,8 @@
 }
 
 .brand-content {
-  display: grid;
+  display: flex;
+  justify-content: space-around;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }

@@ -178,3 +178,15 @@ hr {
   display: flex;
   align-items: center;
 }
+
+
+.header-informs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 150px;
+}
+
+.header-info {
+  font-size: 15px;
+}
