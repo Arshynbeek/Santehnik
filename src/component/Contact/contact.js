@@ -44,7 +44,7 @@ const addressData = [
   {
     city: "Шымкент",
     address: '',
-    number: "",
+    number: "+7 701 300 54 10",
     email: "shymkent@santehtat.kz",
   },
   {
