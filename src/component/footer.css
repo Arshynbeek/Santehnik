@@ -1,11 +1,13 @@
 footer {
   margin-top: 60px;
   display: flex;
-  background-color: var(--background-1);
+  background-color: var(--black);
   padding: 40px 0;
 
   strong {
     font-size: 20px;
+    color: var(--white);
+
   }
 
   p, a {
@@ -15,6 +17,8 @@ footer {
 
   h2 {
     margin: 0;
+    color: var(--white);
+
   }
 }
 
@@ -58,7 +62,7 @@ footer nav > ul > li:last-child p {
 }
 
 .footer-info {
-  color: var(--black);
+  color: var(--white);
   font-weight: 600;
 }
 
@@ -93,4 +97,5 @@ footer nav > ul > li:last-child p {
     width: 24px;
     height: 24px;
   }
+  filter: invert(100%);
 }
