@@ -25,7 +25,7 @@
 }
 
 .more-image {
-  height: 300px;
+  height: 200px;
   padding: 10px;
   border-radius: 4px;
   overflow: hidden;
@@ -47,6 +47,13 @@
   .more-content {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+  }
+
+  .more-image {
+    height: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   .more-card {
