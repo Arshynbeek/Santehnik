@@ -173,7 +173,7 @@ hr {
 
 .parent-category,  .category, .all-products{
   border-radius: 1px;  
-  border: solid 5px rgb(244, 231, 231);
+  border: solid 2px rgb(244, 231, 231);
   text-wrap: wrap;
   display: flex;
   align-items: center;
@@ -189,4 +189,8 @@ hr {
 
 .header-info {
   font-size: 15px;
+}
+
+.categories {
+  background-color: var(--white);
 }
