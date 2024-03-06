@@ -13,7 +13,7 @@ const addressData = [
   },
   {
     city: "Астана",
-    address: "ул.Жана-Жол, дом 2, офис 1",
+    address: "ул.Жана-Жол, 2в",
     number: "+7 701 300 54 14",
     email: "astana@santehtat.kz",
   },
