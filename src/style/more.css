@@ -25,8 +25,8 @@
 }
 
 .more-image {
-  height: 200px;
-  padding: 10px;
+  height: 250px;
+  padding: 5px;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -34,7 +34,7 @@
 .more-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 
 }
